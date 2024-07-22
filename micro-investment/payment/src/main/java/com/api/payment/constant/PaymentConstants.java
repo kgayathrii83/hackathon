@@ -9,7 +9,7 @@ public class PaymentConstants {
     public static final String TYPE_APPLICATION_JSON = "application/json";
 
     public static final String ACCESS_TOKEN = "/token";
-    public static final String TOKEN_ENDPOINT_URL = "https:///ob.sandbox.natwest.com//token";
+    public static final String TOKEN_ENDPOINT_URL = "https://ob.sandbox.natwest.com/token";
     public static final String CLIENT_ID = "tyrShHgs3kXzV9uDRa1-c_GBZhxcJQSbckvxmM1mDk4=";
     public static final String CLIENT_SECRET = "AmWwc7wbqFpt1zwg1hi5rniaGGYVjFOPWPrdbnuzDX0=";
 }
