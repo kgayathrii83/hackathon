@@ -1,33 +1,15 @@
-package com.api.payment.controller;
+package com.api.payment.constant;
 
-import com.api.payment.beans.response.AccessTokenResponse;
-import com.api.payment.service.PaymentService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+public class PaymentConstants {
+    //constant
+    public static final String PAYMENTS_INITIATION = "/payments/initiate";
+    public static final String PAYMENT_SUCCESS_MESSAGE = "Payment successful";
+    public static final String PAYMENT_FAILED_MESSAGE = "Payment failed";
+    public static final String INVALID_PAYMENT_DATA_MESSAGE = "Invalid payment data";
+    public static final String TYPE_APPLICATION_JSON = "application/json";
 
-
-import static com.api.payment.constant.PaymentConstants.*;
-
-@RestController
-public class PaymentController {
-
-
-    @Autowired
-    PaymentService paymentService;
-
-    @PostMapping(value = ACCESS_TOKEN, produces = TYPE_APPLICATION_JSON)
-    public ResponseEntity<Object> getAccessToken() throws Exception {
-    	AccessTokenResponse response = paymentService.getAccessToken();
-        return new ResponseEntity<>(response, HttpStatus.OK);    	
-    }
-    
-    @PostMapping(value = PAYMENTS_INITIATION, produces = TYPE_APPLICATION_JSON)
-    public ResponseEntity<Object> paymentInitiation() throws Exception {
-        return paymentService.initiatePayment();
-    }
-
-
-
+    public static final String ACCESS_TOKEN = "/token";
+    public static final String TOKEN_ENDPOINT_URL = "https://ob.sandbox.natwest.com/token";
+    public static final String CLIENT_ID = "tyrShHgs3kXzV9uDRa1-c_GBZhxcJQSbckvxmM1mDk4=";
+    public static final String CLIENT_SECRET = "AmWwc7wbqFpt1zwg1hi5rniaGGYVjFOPWPrdbnuzDX0=";
 }
